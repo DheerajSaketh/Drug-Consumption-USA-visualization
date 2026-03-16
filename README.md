@@ -1,28 +1,50 @@
 # Drug Consumption USA Visualization
 
-This project visualizes drug overdose deaths in America using data from the CDC.
+## 📌 Problem
+Making sense of complex U.S. drug overdose data to identify high-risk states, trends over time, and regions that need public safety attention.
 
-## Data Source
-The data is sourced from the CDC's Provisional Drug Overdose Death Counts: https://data.cdc.gov/NCHS/VSRR-Provisional-Drug-Overdose-Death-Counts/xkb8-kh2a
+## ✅ Solution
+An interactive visualization project (in the style of a Tableau dashboard) that provides:
+- **Geospatial mapping** (state-level choropleths) to show hotspots
+- **Temporal analysis** (year-over-year trends) with interactive sliders
+- **State-level comparisons** to surface top impacted areas
 
-## Requirements
-Install the required packages:
-```
-pip install -r requirements.txt
+## 🛠 Tools & Technologies
+- Python (Pandas, NumPy)
+- Plotly (interactive charts + maps)
+- Matplotlib + Seaborn (static charts)
+- Dash (interactive dashboard UI)
+
+## 📥 Data Source
+CDC Provisional Drug Overdose Death Counts: https://data.cdc.gov/NCHS/VSRR-Provisional-Drug-Overdose-Death-Counts/xkb8-kh2a
+
+## ⚙️ Setup
+Install dependencies:
+```bash
+python -m pip install -r requirements.txt
 ```
 
-## Running the Project
-Run the main script:
-```
+## ▶️ Run Scripts
+### 1) Script-based outputs (static + interactive HTML)
+```bash
 python main.py
 ```
+Outputs:
+- `drug_overdose_deaths.html` (interactive Plotly chart)
+- `drug_overdose_deaths.png` (static Matplotlib chart)
 
-This will generate:
-- `drug_overdose_deaths.html`: Interactive Plotly visualization
-- `drug_overdose_deaths.png`: Static Matplotlib plot
+### 2) Interactive dashboard (Dash)
+```bash
+python app.py
+```
+Then open the URL shown in the terminal (usually `http://127.0.0.1:8050`).
 
-## Visualizations
-- Line plot showing the trend of drug overdose deaths over the years.
+## 📦 Project Files
+- `main.py` — batch script that loads data and saves charts
+- `app.py` — interactive Dash dashboard
+- `exploration.ipynb` — exploratory notebook with step-by-step analysis
+- `requirements.txt` — dependency list
+- `.gitignore` — ignores generated artifacts
 
-## License
-This project is for educational purposes. Data is from public sources.
+## 🧩 Notes
+This project is intended for learning and exploration. Data is public and results should be interpreted cautiously.
